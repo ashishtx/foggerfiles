@@ -1,0 +1,40 @@
+version: '2.0'
+services:
+  fogger:
+    image: tshio/fogger:latest
+    volumes:
+    - .:/fogger
+    environment:
+      SOURCE_DATABASE_URL: mysql://user:pass@source:3306/source
+      TARGET_DATABASE_URL: mysql://user:pass@target:3306/target
+      REDIS_URL: redis://redis
+  worker:
+    image: tshio/fogger:latest
+    environment:
+      SOURCE_DATABASE_URL: mysql://user:pass@source:3306/source
+      TARGET_DATABASE_URL: mysql://user:pass@target:3306/target
+      REDIS_URL: redis://redis
+    restart: always
+    command: fogger:consumer --messages=200
+  redis:
+    image: redis:4
+  source:
+    volumes:
+    - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
+    environment:
+      MYSQL_DATABASE: source
+      MYSQL_PASSWORD: pass
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_USER: user
+    image: mysql:5.7
+  target:
+    environment:
+      MYSQL_DATABASE: target
+      MYSQL_PASSWORD: pass
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_USER: user
+    image: mysql:5.7
+  adminer:
+    image: adminer
+    ports:
+      - 8083:8080
