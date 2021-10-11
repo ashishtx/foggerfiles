@@ -21,7 +21,7 @@ tables:
             MONTH_FEE: { maskStrategy: none, options: {  } }
             DISCOUNT: { maskStrategy: none, options: {  } }
             MUT_DATUM_INGANG: { maskStrategy: none, options: {  } }
-            MUT_DATUM_EINDE: { maskStrategy: none, options: {  } }
+            MUT_DATUM_EINDE: { maskStrategy: faker, options: {  } }
         subsetStrategy: null
         subsetOptions: {  }
     CUSTOMERS:
