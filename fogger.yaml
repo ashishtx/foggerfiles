@@ -21,7 +21,7 @@ tables:
             MONTH_FEE: { maskStrategy: none, options: {  } }
             DISCOUNT: { maskStrategy: none, options: {  } }
             MUT_DATUM_INGANG: { maskStrategy: none, options: {  } }
-            MUT_DATUM_EINDE: { maskStrategy: faker, options: {  } }
+            MUT_DATUM_EINDE: { maskStrategy: none, options: {  } }
         subsetStrategy: null
         subsetOptions: {  }
     CUSTOMERS:
@@ -29,16 +29,16 @@ tables:
             CUSTOMER_ID: { maskStrategy: none, options: {  } }
             LOGICAL_KEY: { maskStrategy: none, options: {  } }
             TITLE: { maskStrategy: none, options: {  } }
-            FIRST_NAME: { maskStrategy: none, options: {  } }
-            LAST_NAME: { maskStrategy: none, options: {  } }
+            FIRST_NAME: { maskStrategy: faker, options: { method: numberBetween, arguments: [200, 250] } }
+            LAST_NAME: { maskStrategy: starify, options: {  } }
             LAST_NAME_UPPER: { maskStrategy: none, options: {  } }
-            PARTNER_NAME: { maskStrategy: none, options: {  } }
+            PARTNER_NAME: { maskStrategy: hashify, options: {  } }
             FULL_LAST_NAME: { maskStrategy: none, options: {  } }
             COMPANY: { maskStrategy: none, options: {  } }
             BANK: { maskStrategy: none, options: {  } }
             EMAIL: { maskStrategy: none, options: {  } }
             SALARY_YEAR: { maskStrategy: none, options: {  } }
-            GENDER: { maskStrategy: none, options: {  } }
+            GENDER: { maskStrategy: starify, options: {  } }
             DATE_OF_BIRTH: { maskStrategy: none, options: {  } }
             TYPE: { maskStrategy: none, options: {  } }
         subsetStrategy: null
