@@ -1,27 +1,11 @@
 tables:
-    CONTRACTS:
+    CURRENCY:
         columns:
-            CONTRACT_ID: { maskStrategy: none, options: {  } }
-            LOGICAL_KEY: { maskStrategy: none, options: {  } }
-            CUSTOMER_ID: { maskStrategy: none, options: {  } }
-            PRODUCT_ID: { maskStrategy: none, options: {  } }
-            LOCATION_ID: { maskStrategy: none, options: {  } }
-            SERIAL_ID: { maskStrategy: none, options: {  } }
-            MUT_DATUM_INGANG: { maskStrategy: none, options: {  } }
-            MUT_DATUM_EINDE: { maskStrategy: none, options: {  } }
-        subsetStrategy: null
-        subsetOptions: {  }
-    CONTRACT_DETAILS:
-        columns:
-            CONTRACT_DETAIL_ID: { maskStrategy: none, options: {  } }
-            LOGICAL_KEY: { maskStrategy: none, options: {  } }
-            CONTRACT_ID: { maskStrategy: none, options: {  } }
-            CONTRACT_BEGINDATE: { maskStrategy: none, options: {  } }
-            CONTRACT_ENDDATE: { maskStrategy: none, options: {  } }
-            MONTH_FEE: { maskStrategy: none, options: {  } }
-            DISCOUNT: { maskStrategy: none, options: {  } }
-            MUT_DATUM_INGANG: { maskStrategy: none, options: {  } }
-            MUT_DATUM_EINDE: { maskStrategy: none, options: {  } }
+            CURRENCY_ID: { maskStrategy: none, options: {  } }
+            SIGN: { maskStrategy: none, options: {  } }
+            CODE: { maskStrategy: none, options: {  } }
+            EXCHANGE_SINGLE: { maskStrategy: none, options: {  } }
+            EXCHANGE_DOUBLE: { maskStrategy: none, options: {  } }
         subsetStrategy: null
         subsetOptions: {  }
     CUSTOMERS:
@@ -29,36 +13,18 @@ tables:
             CUSTOMER_ID: { maskStrategy: none, options: {  } }
             LOGICAL_KEY: { maskStrategy: none, options: {  } }
             TITLE: { maskStrategy: none, options: {  } }
-            FIRST_NAME: { maskStrategy: faker, options: { method: numberBetween, arguments: [200, 250] } }
-            LAST_NAME: { maskStrategy: starify, options: {  } }
+            FIRST_NAME: { maskStrategy: none, options: {  } }
+            LAST_NAME: { maskStrategy: none, options: {  } }
             LAST_NAME_UPPER: { maskStrategy: none, options: {  } }
-            PARTNER_NAME: { maskStrategy: hashify, options: {  } }
+            PARTNER_NAME: { maskStrategy: none, options: {  } }
             FULL_LAST_NAME: { maskStrategy: none, options: {  } }
             COMPANY: { maskStrategy: none, options: {  } }
             BANK: { maskStrategy: none, options: {  } }
             EMAIL: { maskStrategy: none, options: {  } }
             SALARY_YEAR: { maskStrategy: none, options: {  } }
-            GENDER: { maskStrategy: starify, options: {  } }
+            GENDER: { maskStrategy: none, options: {  } }
             DATE_OF_BIRTH: { maskStrategy: none, options: {  } }
             TYPE: { maskStrategy: none, options: {  } }
-        subsetStrategy: null
-        subsetOptions: {  }
-    LOCATIONS:
-        columns:
-            LOCATION_ID: { maskStrategy: none, options: {  } }
-            LOGICAL_KEY: { maskStrategy: none, options: {  } }
-            STREET: { maskStrategy: none, options: {  } }
-            HOUSENUMBER: { maskStrategy: none, options: {  } }
-            HOUSEAD: { maskStrategy: none, options: {  } }
-            POSTALCODE: { maskStrategy: none, options: {  } }
-            CITY: { maskStrategy: none, options: {  } }
-            COUNTRY: { maskStrategy: none, options: {  } }
-            EMAIL: { maskStrategy: none, options: {  } }
-            BANK: { maskStrategy: none, options: {  } }
-            TELEPHONE: { maskStrategy: none, options: {  } }
-            CA_GROUPID: { maskStrategy: none, options: {  } }
-            MUT_DATUM_INGANG: { maskStrategy: none, options: {  } }
-            MUT_DATUM_EINDE: { maskStrategy: none, options: {  } }
         subsetStrategy: null
         subsetOptions: {  }
     user_details:
