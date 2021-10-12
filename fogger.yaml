@@ -1,7 +1,7 @@
 tables:
     CURRENCY:
         columns:
-            CURRENCY_ID: { maskStrategy: none, options: {  } }
+            CURRENCY_ID: { maskStrategy: faker, options: {  } }
             SIGN: { maskStrategy: none, options: {  } }
             CODE: { maskStrategy: none, options: {  } }
             EXCHANGE_SINGLE: { maskStrategy: none, options: {  } }
@@ -10,11 +10,11 @@ tables:
         subsetOptions: {  }
     CUSTOMERS:
         columns:
-            CUSTOMER_ID: { maskStrategy: none, options: {  } }
+            CUSTOMER_ID: { maskStrategy: faker, options: { method: numberBetween, arguments: [200, 250] } }
             LOGICAL_KEY: { maskStrategy: none, options: {  } }
             TITLE: { maskStrategy: none, options: {  } }
-            FIRST_NAME: { maskStrategy: none, options: {  } }
-            LAST_NAME: { maskStrategy: none, options: {  } }
+            FIRST_NAME: { maskStrategy: hashify, options: {  } }
+            LAST_NAME: { maskStrategy: starify, options: {  } }
             LAST_NAME_UPPER: { maskStrategy: none, options: {  } }
             PARTNER_NAME: { maskStrategy: none, options: {  } }
             FULL_LAST_NAME: { maskStrategy: none, options: {  } }
