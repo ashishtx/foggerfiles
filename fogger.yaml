@@ -1,32 +1,4 @@
 tables:
-    CURRENCY:
-        columns:
-            CURRENCY_ID: { maskStrategy: faker, options: {  } }
-            SIGN: { maskStrategy: none, options: {  } }
-            CODE: { maskStrategy: none, options: {  } }
-            EXCHANGE_SINGLE: { maskStrategy: none, options: {  } }
-            EXCHANGE_DOUBLE: { maskStrategy: none, options: {  } }
-        subsetStrategy: null
-        subsetOptions: {  }
-    CUSTOMERS:
-        columns:
-            CUSTOMER_ID: { maskStrategy: faker, options: { method: numberBetween, arguments: [200, 250] } }
-            LOGICAL_KEY: { maskStrategy: none, options: {  } }
-            TITLE: { maskStrategy: none, options: {  } }
-            FIRST_NAME: { maskStrategy: hashify, options: {  } }
-            LAST_NAME: { maskStrategy: starify, options: {  } }
-            LAST_NAME_UPPER: { maskStrategy: none, options: {  } }
-            PARTNER_NAME: { maskStrategy: none, options: {  } }
-            FULL_LAST_NAME: { maskStrategy: none, options: {  } }
-            COMPANY: { maskStrategy: none, options: {  } }
-            BANK: { maskStrategy: none, options: {  } }
-            EMAIL: { maskStrategy: none, options: {  } }
-            SALARY_YEAR: { maskStrategy: none, options: {  } }
-            GENDER: { maskStrategy: none, options: {  } }
-            DATE_OF_BIRTH: { maskStrategy: none, options: {  } }
-            TYPE: { maskStrategy: none, options: {  } }
-        subsetStrategy: null
-        subsetOptions: {  }
     user_details:
         columns:
             user_id: { maskStrategy: none, options: {  } }
