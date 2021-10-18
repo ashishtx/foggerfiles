@@ -6,13 +6,13 @@ services:
     - .:/fogger
     environment:
       SOURCE_DATABASE_URL: mysql://user:pass@source:3306/source
-      TARGET_DATABASE_URL: mysql://user:pass@target:3306/target
+      TARGET_DATABASE_URL: mysql://user:pass@target:3306/targett
       REDIS_URL: redis://redis
   worker:
     image: tshio/fogger:latest
     environment:
       SOURCE_DATABASE_URL: mysql://user:pass@source:3306/source
-      TARGET_DATABASE_URL: mysql://user:pass@target:3306/target
+      TARGET_DATABASE_URL: mysql://user:pass@target:3306/targett
       REDIS_URL: redis://redis
     restart: always
     command: fogger:consumer --messages=200
@@ -29,7 +29,7 @@ services:
     image: mysql:5.7
   target:
     environment:
-      MYSQL_DATABASE: target
+      MYSQL_DATABASE: targett
       MYSQL_PASSWORD: pass
       MYSQL_ROOT_PASSWORD: pass
       MYSQL_USER: user
