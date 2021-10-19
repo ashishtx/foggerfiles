@@ -5,15 +5,4 @@ tables:
             empname: { maskStrategy: starify, options: {  } }
         subsetStrategy: null
         subsetOptions: {  }
-    user_details:
-        columns:
-            user_id: { maskStrategy: none, options: {  } }
-            username: { maskStrategy: none, options: {  } }
-            first_name: { maskStrategy: none, options: {  } }
-            last_name: { maskStrategy: none, options: {  } }
-            gender: { maskStrategy: none, options: {  } }
-            password: { maskStrategy: none, options: {  } }
-            status: { maskStrategy: none, options: {  } }
-        subsetStrategy: null
-        subsetOptions: {  }
-excludes: {  }
+    excludes: {  }
