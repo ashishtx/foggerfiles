@@ -1,8 +1,8 @@
 tables:
     emp_details:
         columns:
-            emp_id: { maskStrategy: faker, options: { method: numberBetween, arguments: [200, 250] } }
-            empname: { maskStrategy: hashify, options: {  } }
+            emp_id: { maskStrategy: none, options: {  } }
+            empname: { maskStrategy: none, options: {  } }
         subsetStrategy: null
         subsetOptions: {  }
-    excludes: {  }
+excludes: {  }
