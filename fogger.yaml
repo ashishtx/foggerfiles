@@ -1,10 +1,10 @@
 tables:
     user_details:
         columns:
-            user_id: { maskStrategy: none, options: {  } }
-            username: { maskStrategy: none, options: {  } }
-            first_name: { maskStrategy: none, options: {  } }
-            last_name: { maskStrategy: none, options: {  } }
+            user_id: { maskStrategy: faker, options: { method: numberBetween, arguments: [200, 250] } }
+            username: { maskStrategy: hashify, options: {  } }
+            first_name: { maskStrategy: starify, options: {  } }
+            last_name: { maskStrategy: faker, options: { method: email } }
             gender: { maskStrategy: none, options: {  } }
             password: { maskStrategy: none, options: {  } }
             status: { maskStrategy: none, options: {  } }
