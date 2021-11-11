@@ -1,8 +1,13 @@
 tables:
-    emp_details:
+    user_details:
         columns:
-            emp_id: { maskStrategy: faker, options: { method: numberBetween, arguments: [200, 250]  } }
-            empname: { maskStrategy: starify, options: {  } }
+            user_id: { maskStrategy: none, options: {  } }
+            username: { maskStrategy: none, options: {  } }
+            first_name: { maskStrategy: none, options: {  } }
+            last_name: { maskStrategy: none, options: {  } }
+            gender: { maskStrategy: none, options: {  } }
+            password: { maskStrategy: none, options: {  } }
+            status: { maskStrategy: none, options: {  } }
         subsetStrategy: null
         subsetOptions: {  }
 excludes: {  }
