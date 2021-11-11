@@ -1,0 +1,8 @@
+tables:
+    emp_details:
+        columns:
+            emp_id: { maskStrategy: faker, options: { method: numberBetween, arguments: [200, 250]  } }
+            empname: { maskStrategy: starify, options: {  } }
+        subsetStrategy: null
+        subsetOptions: {  }
+excludes: {  }
