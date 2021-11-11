@@ -1,15 +1,9 @@
 version: '2.0'
 services:
   fogger:
-    image: tshio/fogger:latest
+    image: tshio/fogger
     volumes:
     - .:/fogger
-    environment:
-      SOURCE_DATABASE_URL: mysql://user:pass@source:3306/source
-      TARGET_DATABASE_URL: mysql://user:pass@target:3306/target
-      REDIS_URL: redis://redis
-  worker:
-    image: tshio/fogger:latest
     environment:
       SOURCE_DATABASE_URL: mysql://user:pass@source:3306/source
       TARGET_DATABASE_URL: mysql://user:pass@target:3306/target
